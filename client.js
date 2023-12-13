@@ -30,7 +30,8 @@ socket.on('user-joined', name => {
 
 
 socket.on('receive', data => {
-    append(`${data.user} :${data.message}`, 'left')
+    append(`${data.name} :${data.message}`, 'left')
+    console.log(data)
 })
 socket.on('left', name => {
     append(`${name} joined the chat`, 'right')
